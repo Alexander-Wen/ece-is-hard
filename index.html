@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 		<title>ECE is hard</title>
 		<link rel="shortcut icon" href="http://www.howmanytimeshasecebuttfucked.me/favicon.ico" />
 		
-		<link href="style.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 		
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 	</head>
 	<body>
-		<p id="sentence">We have been butt fucked by the <span id="course"></span></p>
-		<p id="count">Total Fuckings: 3</p>
-	</body>
-	<script>
-		var txt = ['MATH 117 Final','ECE 124 Quiz 1', 'ECE 106 Midterm'],
-			n = txt.length,
-			$course = $('#course'),
-			$span,
-			c = 0;
-
-		// CREATE SPANS INSIDE SPAN
-		for(var i=0; i<txt.length; i++) $course.append($('<span />',{text:txt[i]}));
-		// HIDE AND COLLECT THEM
-		$span = $("span", $course).hide(); 
-
-		(function loop(){
-			c = ++c % n;
-			$course.animate({width: $span.eq( c ).width() });
-			$span.stop().fadeOut().eq(c).fadeIn().delay(1500).show(0, loop);
-		}());
+		<!-- Landing Page -->
+		<header class="header">
+			<div class="text-vertical-center">
+				<h1><span id="course"></span></h1>
+				<h2>3</h2>
+			</div>
+		</header>
 		
-		$(function() {
-		$('.className').css({
-			'position' : 'absolute',
-			'left' : '50%',
-			'top' : '50%',
-			'margin-left' : -$(this).width()/2,
-			'margin-top' : -$(this).height()/2
-		});
-});
-	</script>
+		<!-- Other stuff -->
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/alex.js"></script>
+	</body>
 </html>
