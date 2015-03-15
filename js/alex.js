@@ -1,8 +1,8 @@
-var txt = ['Total Fuckings',
+var txt = ['Total Unsolicited Penetrations',
 			'Total Butt Fucks',
 			'Total Ass Violations',
 			'Total Cactus Insertions',
-			'Total Unsolicited Penetrations',
+			'Total Fuckings',
 			'Total Pineapple Insertions',
 			'Total Backdoor Smashings',
 			'Total Turd Burglings',
@@ -17,14 +17,14 @@ var txt = ['Total Fuckings',
 // CREATE SPANS INSIDE SPAN
 for(var i=0; i<txt.length; i++) $course.append($('<span />',{text:txt[i]}));
 // HIDE AND COLLECT THEM
-$span = $("span", $course).hide(); 
+$span = $("span", $course).hide();
 
 (function loop(){
 	c = ++c % n;
 	$course.animate({width: $span.eq( c ).width() });
 	$span.stop().fadeOut().eq(c).fadeIn().delay(1500).show(0, loop);
 }());
-		
+
 $(function() {
 	$('.className').css({
 		'position' : 'absolute',
